@@ -1,106 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <title>Специализированные спортивные товары для экстремальных видов спорта</title>
+  <title>специализированные спортивные товары для экстремальных видов спорта</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="лендинг.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    body.container {
+      font-family: arial, sans-serif;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    header, nav, section, footer {
-      padding: 20px;
+    input.input,
+    textarea.textarea {
+      padding: 5px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input.input:focus,
+    textarea.textarea:focus {
+      border-color: #333;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      background-color: rgba(237,113,39);
+      color: #fff;
+      padding: 10px 0;
       text-align: center;
     }
 
-    header, footer {
-      background-color: #333;
-      color: #fff;
+    .nav-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
     }
 
-    nav {
-      background-color: #555;
-      color: #fff;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
+    .nav-list li {
       margin: 0 10px;
     }
 
-    section {
-      padding: 40px;
-    }
-
-    /* Дополнительные стили */
-    nav a:nth-child(odd) {
-      background-color: #777;
-    }
-
-    section:first-child {
-      background-color: #f4f4f4;
-    }
-
-    section:last-child {
-      background-color: #ccc;
-    }
-
-    section:nth-child(2n) {
-      background-color: #f9f9f9;
-    }
-
-    section:nth-child(3) {
-      font-weight: bold;
+    .nav-list li a {
+      color: #fff;
+      text-decoration: none;
     }
 
     section {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    section h1 {
+      font-size: 36px;
+    }
+
+    section p {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .btn {
       display: inline-block;
-      vertical-align: top;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color:rgba(237,113,39);
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Специализированные спортивные товары для экстремальных видов спорта</h1>
+<body class="container">
+  <header class="header">
+    <h1>специализированные спортивные товары для экстремальных видов спорта</h1>
   </header>
 
   <nav>
-    <a href="#home">Главная</a>
-    <a href="#products">Товары</a>
-    <a href="#about">О нас</a>
-    <a href="#contact">Контакты</a>
+    <ul class="nav-list">
+      <li><a href="#home">главная</a></li>
+      <li><a href="#products">товары</a></li>
+      <li><a href="#about">о нас</a></li>
+      <li><a href="#contact">контакты</a></li>
+      <li><a href="#order" class="btn">заказать</a></li>
+    </ul>
   </nav>
 
   <section id="home">
-    <h2>Добро пожаловать на наш сайт!</h2>
-    <p>Мы предлагаем широкий ассортимент специализированных спортивных товаров для экстремальных видов спорта.</p>
+    <h2>добро пожаловать на наш сайт!</h2>
+    <p>мы предлагаем широкий ассортимент специализированных спортивных товаров для экстремальных видов спорта.</p>
   </section>
   
   <section id="products">
-    <h2>Наши товары</h2>
-    <p>Здесь вы найдете все необходимое для занятия экстремальными видами спорта: горные велосипеды, скейтборды, серфинговые доски и многое другое.</p>
+    <h2>наши товары</h2>
+    <p>здесь вы найдете все необходимое для занятия экстремальными видами спорта: горные велосипеды, скейтборды, серфинговые доски и многое другое.</p>
   </section>
   
 
   <section id="about">
-    <h2>О нас</h2>
-    <p>Мы являемся ведущими поставщиками высококачественных специализированных товаров для экстремальных видов спорта уже более 10 лет.</p>
+    <h2>о нас</h2>
+    <p>мы являемся ведущими поставщиками высококачественных специализированных товаров для экстремальных видов спорта уже более 10 лет.</p>
   </section>
 
   <section id="contact">
-    <h2>Контакты</h2>
-    <p>Мы находимся по адресу: ул. Примерная, 123, Город</p>
-    <p>Телефон: 123-456-789</p>
-    <p>Email: info@example.com</p>
+    <h2>контакты</h2>
+    <p>мы находимся по адресу: ул. примерная, 123, город</p>
+    <p>телефон: 123-456-789</p>
+    <p>email: info@example.com</p>
+  </section>
+
+  <section id="order" class="order-form">
+    <h2>оформление заказа</h2>
+    <form>
+      <input class="input" type="text" placeholder="ваше имя">
+      <br>
+      <textarea class="textarea" rows="4" placeholder="ваше сообщение"></textarea>
+      <br>
+      <button class="btn" type="submit">отправить</button>
+    </form>
   </section>
 
   <footer>
-    <p>© Все права защищены</p>
+    <p>© все права защищены</p>
   </footer>
 </body>
 </html>
