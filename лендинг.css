@@ -1,4 +1,6 @@
-
+html, body {
+    width:100%
+}
 wrapper{
 -display: -ms-flex;    
 }
