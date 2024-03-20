@@ -5,15 +5,17 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="лендинг.css">
   <style>
+    /* общие стили */
     body, .container {
       font-family: arial, sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       text-align: center;
-      width:100%
+      width: 100%;
     }
 
+    /* стили для input и textarea */
     input.input,
     textarea.textarea {
       padding: 5px;
@@ -28,6 +30,7 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
 
+    /* стили для header */
     .header {
       background-color: rgba(237,113,39);
       color: #fff;
@@ -35,6 +38,7 @@
       text-align: center;
     }
 
+    /* стили для навигационного меню */
     .nav-list {
       list-style-type: none;
       margin: 0;
@@ -52,6 +56,7 @@
       text-decoration: none;
     }
 
+    /* стили для section */
     section {
       padding: 50px 0;
       text-align: center;
@@ -66,6 +71,7 @@
       margin-bottom: 20px;
     }
 
+    /* стили для кнопки */
     .btn {
       display: inline-block;
       background-color: #333;
@@ -80,6 +86,7 @@
       background-color: #555;
     }
 
+    /* стили для footer */
     footer {
       background-color:rgba(237,113,39);
       color: #fff;
@@ -87,36 +94,57 @@
       text-align: center;
       width: 100%;
     }
+
+    /* стили для flex-контейнера */
+    .flex-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* стили для товаров */
+    .product {
+      margin: 10px;
+    }
   </style>
 </head>
 <body class="container">
-  <header class="header">
+  <div class="header-container">
+  <div>
+  
     <h1>специализированные спортивные товары для экстремальных видов спорта</h1>
-  </header>
-  <nav>
-    <ul class="nav-list">
-      <li><a href="#home">главная</a></li>
-      <li><a href="#products">товары</a></li>
-      <li><a href="#about">о нас</a></li>
-      <li><a href="#contact">контакты</a></li>
-      <li><a href="#order" class="btn">заказать</a></li>
-    </ul>
-  </nav>
+</div>
+<div>
+<a href="#order" class="btn">заказать</a>
+</div>
+  </div>
+  
 
   <section id="home">
     <h2>добро пожаловать на наш сайт!</h2>
     <p>мы предлагаем широкий ассортимент специализированных спортивных товаров для экстремальных видов спорта.</p>
+    <img scr="1701566572_sportishka-com-p-snoubording-ekstremalnii-vid-sporta-pinter-10.jpg">
   </section>
   
   <section id="products">
     <h2>наши товары</h2>
     <p>здесь вы найдете все необходимое для занятия экстремальными видами спорта: горные велосипеды, скейтборды, серфинговые доски и многое другое.</p>
-  </section>
+    <img src="1715da446551bebc7a5904108a3f985a.jpeg">
   
+    <div class="flex-container">
+      <div class="product">
+        товар 1
+      </div>
+
+      <div class="product">
+        товар 2
+      </div>
+    </div>
+  </section>
 
   <section id="about">
     <h2>о нас</h2>
     <p>мы являемся ведущими поставщиками высококачественных специализированных товаров для экстремальных видов спорта уже более 10 лет.</p>
+    <img scr="сотрудники.png">
   </section>
 
   <section id="contact">

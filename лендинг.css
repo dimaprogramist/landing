@@ -1,12 +1,14 @@
 html, body {
-    width:100%
+    width: 100%;
 }
-wrapper{
--display: -ms-flex;    
+
+.wrapper {
+    display: flex;
 }
+
 /* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,12 +20,18 @@ input {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
+.header-container {
+   display: flex;
+   flex-direction: column;
+}
 input:focus {
     border-color: #333;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
-
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
 .container {
     margin: 0 auto;
     padding: 20px;
@@ -31,12 +39,11 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;       
+    align-items: center;
     text-align: center;
-      
 }
 
-/* Стили для header */
+/* Стили для заголовка */
 header {
     background-color: #333;
     padding: 10px 0;
@@ -60,7 +67,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Стили для section */
+/* Стили для секции */
 section {
     padding: 50px 0;
     text-align: center;
@@ -84,14 +91,13 @@ section p {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    justify-content: center;
 }
 
 .btn:hover {
     background-color: #555;
 }
 
-/* Стили для footer */
+/* Стили для подвала */
 footer {
     background-color: #333;
     color: #fff;
