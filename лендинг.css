@@ -1,17 +1,75 @@
-html, body {
-    width: 100%;
+:root {
+    --primary-color: #333;
+    --secondary-color: #777;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
 }
 
-.wrapper {
-    display: flex;
-}
-
-/* Общие стили */
+html,
 body {
+    width: 100%;
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для устройств с шириной экрана до 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 2%;
+    }
+
+    section h1 {
+        font-size: var(--font-size-medium);
+    }
+
+    section p {
+        font-size: var(--font-size-small);
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+}
+
+/* Для устройств с шириной экрана от 768px до 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 2%;
+    }
+
+    section h1 {
+        font-size: var(--font-size-large);
+    }
+
+    section p {
+        font-size: var(--font-size-medium);
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+}
+
+/* Для устройств с шириной экрана более 1024px */
+@media only screen and (min-width: 1024px) {
+    .container {
+        padding: 2%;
+    }
+
+    section h1 {
+        font-size: var(--font-size-large);
+    }
+
+    section p {
+        font-size: var(--font-size-large);
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
 }
 
 input {
@@ -20,21 +78,25 @@ input {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-.header-container {
-   display: flex;
-   flex-direction: column;
-}
+
 input:focus {
     border-color: #333;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-between;
 }
+
 .container {
     margin: 0 auto;
-    padding: 20px;
+    padding: 2%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -45,7 +107,7 @@ input:focus {
 
 /* Стили для заголовка */
 header {
-    background-color: #333;
+    background-color: var(--primary-color);
     padding: 10px 0;
     border-radius: 20px;
 }
@@ -73,19 +135,10 @@ section {
     text-align: center;
 }
 
-section h1 {
-    font-size: 36px;
-}
-
-section p {
-    color: #777;
-    margin-bottom: 20px;
-}
-
 /* Стили для кнопки */
 .btn {
     display: inline-block;
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -99,7 +152,7 @@ section p {
 
 /* Стили для подвала */
 footer {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px 0;
     text-align: center;
